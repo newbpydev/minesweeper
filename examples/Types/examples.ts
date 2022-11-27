@@ -1,6 +1,6 @@
-export type UserPermissions = 'admin' | 'user' | 'manager';
+export type UserPermissions = "admin" | "user" | "manager";
 
-export type PermissionsWithoutAdmin = Exclude<UserPermissions, 'admin'>;
+export type PermissionsWithoutAdmin = Exclude<UserPermissions, "admin">;
 
 interface DepartmentsForPermission {
   depName: string;
@@ -9,15 +9,15 @@ interface DepartmentsForPermission {
 
 export const DepsForPerms: Record<UserPermissions, DepartmentsForPermission> = {
   admin: {
-    depName: 'security',
+    depName: "security",
     lvl: 10,
   },
   user: {
-    depName: 'sales',
+    depName: "sales",
     lvl: 5,
   },
   manager: {
-    depName: 'sales',
+    depName: "sales",
     lvl: 10,
   },
 };
@@ -32,7 +32,7 @@ type BasicUser<A = boolean, P = TuplePermissinons> = {
   permissions?: P;
 };
 
-export type BasicUserWithoutPermissions = Omit<BasicUser, 'permissions'>;
+export type BasicUserWithoutPermissions = Omit<BasicUser, "permissions">;
 
 type AdvancedUser = {
   account: number;
@@ -47,15 +47,15 @@ export type BasicUserPartial = Partial<BasicUser>;
 export type BasicUserReadonlyRequired = Readonly<Required<BasicUser>>;
 
 const user: FullUser<boolean> = {
-  name: 'Nick',
-  surname: 'Ovchinnikov',
+  name: "Nick",
+  surname: "Ovchinnikov",
   age: 30,
   isAdmin: true,
   account: 100,
-  permissions: ['admin', 'user'],
+  permissions: ["admin", "user"],
 };
 
-user.name = 'Test';
+user.name = "Test";
 
 const usersArray: FullUser[] = [user, user];
 

@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ const Header: FC<HeaderProps> = ({ children, logo }) => (
     {logo ? (
       <img src={logo} className="App-logo" alt="logo" />
     ) : (
-      'There is no any logo!'
+      "There is no any logo!"
     )}
     {children}
   </header>
@@ -32,7 +32,7 @@ const Header: FC<HeaderProps> = ({ children, logo }) => (
 
 interface LinkProps {
   href: string;
-  target?: '_blank' | '_self' | '_parent' | '_top';
+  target?: "_blank" | "_self" | "_parent" | "_top";
   rel?: string;
 }
 
@@ -43,8 +43,8 @@ const Link: FC<LinkProps> = ({ children, ...restProps }) => (
 );
 
 Link.defaultProps = {
-  target: '_blank',
-  rel: 'noopener noreferrer',
+  target: "_blank",
+  rel: "noopener noreferrer",
 };
 
 export default App;

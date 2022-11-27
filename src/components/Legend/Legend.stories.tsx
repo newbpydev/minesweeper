@@ -1,10 +1,10 @@
-import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import React from "react";
+import { Story, Meta } from "@storybook/react";
 
-import { Legend } from './Legend';
+import { Legend } from "./Legend";
 
 export default {
-  title: 'Top/Legend',
+  title: "Legend",
   component: Legend,
 } as Meta;
 

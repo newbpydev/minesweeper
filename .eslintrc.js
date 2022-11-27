@@ -5,31 +5,38 @@ module.exports = {
     node: true,
   },
   extends: [
-    'eslint:recommended',
-    'plugin:prettier/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:@typescript-eslint/recommended',
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:storybook/recommended",
   ],
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module',
+    sourceType: "module",
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {
-    'prettier/prettier': ['error', { singleQuote: true }],
-    'react/prop-types': 0,
+    "prettier/prettier": ["error", { singleQuote: false }],
+    "react/prop-types": 0,
   },
   overrides: [
     {
-      files: ['webpack.config.js'],
+      files: ["webpack.config.js"],
       rules: {
-        '@typescript-eslint/no-var-requires': ['off'],
+        "@typescript-eslint/no-var-requires": ["off"],
       },
     },
   ],
+
+  settings: {
+    react: {
+      version: "detect",
+    },
+  },
 };
